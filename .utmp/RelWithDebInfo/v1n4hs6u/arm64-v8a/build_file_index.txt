@@ -1,0 +1,2 @@
+M:\Aryabodhi\Coffee-Jam\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+M:\Aryabodhi\Coffee-Jam\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt

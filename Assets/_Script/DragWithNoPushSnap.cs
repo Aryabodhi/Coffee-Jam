@@ -140,6 +140,7 @@ public class DragWithNoPushSnap : MonoBehaviour{
         }
         
         transform.position = snappedPosition;
+        tray.CheckForWalls();
        
     }
 

@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class Tray : MonoBehaviour{
     [System.Serializable]
@@ -24,10 +23,10 @@ public class Tray : MonoBehaviour{
 
     [Header("Layer and Debug")] public LayerMask layerMask;
     public bool drawGizmos = true;
-    public UnityEngine.Color gizmoColor = UnityEngine.Color.green;
+    public Color gizmoColor = Color.green;
 
     [Header("BoxCast Settings Per Direction")]
-    public DirectionCastSettings[] casts = new DirectionCastSettings[]{
+    public DirectionCastSettings[] casts = {
         new DirectionCastSettings{ name = "Forward", direction = Vector3.forward },
         new DirectionCastSettings{ name = "Back", direction = Vector3.back },
         new DirectionCastSettings{ name = "Right", direction = Vector3.right },
@@ -44,7 +43,7 @@ public class Tray : MonoBehaviour{
             bool canPass = false;
             foreach (var hit in hits){
                 if (!hit.transform.IsChildOf(transform)){
-                    Debug.Log($"[{cast.name}] Hit {hit.collider.name}");
+                    // Debug.Log($"[{cast.name}] Hit {hit.collider.name}");
                     if (hit.transform.TryGetComponent(out ColorIdentifier wall)){
                         canPass = wall.GetColor() == color;
                     }
